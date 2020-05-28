@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Tanya 3</title>
+</head>
+
+<body>
+
+
+
+
+    <header>
+
+
+        <div class="container container-nav">
+            <nav>
+                <ul>
+
+
+                    <li><a id="li-add" href="#">Add</a></li>
+                    <li><a id="li-see" href="#">See</a></li>
+                    <li><a id="li-search" href="#">Search</a></li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <div id="div-add" class="invisible-to-user">
+
+            <div id="div-add-select">
+                <select name="" id="div-add-select-brand">
+                
+                <option value="">Select Brand</option>
+                <option value="toyota">Toyota</option>
+                <option value="audi">Audi</option>
+                <option value="tesla">Tesla</option>
+                <option value="honda">Honda</option>
+
+
+            </select>
+            </div>
+
+
+
+            <div id="div-add-date">
+
+                <input type="search" id="div-add-date-input" rows="2" autocomplete="off" placeholder="yy-mm-dd">
+
+            </div>
+
+            <div id="div-add-textarea">
+                <textarea name="div-add-textarea-add-cars" id="div-add-textarea-add-cars" cols="20" rows="10" autocomplete="off" placeholder="copy paste excel data"></textarea>
+            </div>
+            <div id="div-add-button">
+                <button class="button" id="div-add-customer-button">Add</button>
+            </div>
+
+
+
+        </div>
+
+
+
+
+        <br>
+        <br>
+
+
+
+        <div id="div-search" class="invisible-to-user">
+
+            <input class="inputs-search" type="search" name="brand-name" id="div-search-brand-input" autocomplete="off" placeholder="brand">
+            <input class="inputs-search" type="search" name="customer-name" id="div-search-name-input" autocomplete="off" placeholder="name">
+            <input class="inputs-search" type="search" name="purchase-date" id="div-search-date-input" autocomplete="off" placeholder="yy-mm-dd">
+            <button class="boot-btn boot-btn-default" type="submit" id="div-search-button">Search</button>
+
+        </div>
+
+
+
+
+
+
+        <div id="div-search-table" class="invisible-to-user">
+
+            <table class="table table-hover table-borderless">
+                <thead>
+                    <tr>
+                        <th class="data-table-head ">#</th>
+                        <th class="data-table-head ">Brand</th>
+                        <th class="data-table-head">Name</th>
+                        <th class="data-table-head">Amount</th>
+                        <th class="data-table-head">Date</th>
+                        <th class="data-table-head">Id</th>
+                        <th class="data-table-head">E</th>
+                        <th class="data-table-head">D</th>
+                    </tr>
+                </thead>
+                <tbody id="data-table">
+
+
+
+
+                </tbody>
+            </table>
+
+        </div>
+
+
+        <!-- modal edit -->
+
+
+        <div class="modal-edit">
+            <div class="modal-edit-content">
+                <div><input class="modal-edit-inputs" id="modal-edit-brand" placeholder="brand" type="text"></div>
+                <div><input class="modal-edit-inputs" id="modal-edit-name" placeholder="name" type="text"></div>
+                <div><input class="modal-edit-inputs" id="modal-edit-amount" placeholder="amount" type="text"></div>
+                <div><input class="modal-edit-inputs" id="modal-edit-date" placeholder="date" type="text"></div>
+                <div><span id="modal-edit-save-button" class="modal-edit-close-button">Save</span></div>
+                <div><span id="modal-edit-back-button" class="modal-edit-close-button">Back</span></div>
+
+            </div>
+        </div>
+
+        <!-- modal-delete delete -->
+        <div class="modal-delete">
+            <div class="modal-delete-content">
+                <h2> Delete Customer ?</h2>
+                <div>
+                    <p class="modal-delete-customer" id="modal-delete-brand">brand </p>
+                </div>
+                <div>
+                    <p class="modal-delete-customer" id="modal-delete-name"> name </p>
+                </div>
+                <div>
+                    <p class="modal-delete-customer" id="modal-delete-amount"> amount </p>
+                </div>
+                <div>
+                    <p class="modal-delete-customer" id="modal-delete-date">date </p>
+                </div>
+                <div>
+                    <p class="modal-delete-customer" id="modal-delete-id">id </p>
+                </div>
+                <div><span id="modal-delete-button" class="modal-delete-close-button">Delete</span></div>
+                <div><span id="modal-delete-back-button" class="modal-delete-close-button">Back</span></div>
+
+            </div>
+        </div>
+
+
+
+        <!-- customer card template -->
+
+        <div id="div-see" class="invisible-to-user">
+
+            <!-- template as follwing will come from JS -->
+
+
+        </div>
+
+
+
+
+    </main>
+
+
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
