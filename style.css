@@ -42,17 +42,17 @@ body {
 #div-add-date-input {
     margin-left: 50px;
     width: 200px;
-    height: 100px;
+    height: 40px;
     margin-bottom: 0;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 #div-add-textarea-add-cars {
     margin-left: 50px;
     width: 200px;
-    margin-top: 2rem;
     margin-left: 50px;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 .container {
@@ -68,35 +68,29 @@ body {
     /* justify-content: space-between; */
 }
 
-#div-see {
-    font-size: 2rem;
-    margin-top: 2rem;
-    margin-left: 2rem;
-}
-
 #div-search {
-    margin-top: 7rem;
+    margin-top: 2rem;
     width: 100%;
-    height: 5rem;
+    height: 3rem;
     margin-left: 50px;
-    margin-bottom: 13rem;
+    margin-bottom: 3rem;
 }
 
 .inputs-search {
     width: 10rem;
-    height: 4.5rem;
+    height: 2rem;
     margin-bottom: 0;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     border: 2px solid rgb(120, 210, 120);
     border-radius: 0.3rem;
     transition: border-color 2s ease-in-out, box-shadow 2s ease-in-out;
 }
 
 #div-search-button {
-    width: 10rem;
-    height: 4.5rem;
+    width: 6rem;
+    height: 2.5rem;
     margin-top: 0;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-left: 50px;
     border: 2px solid rgb(120, 210, 120);
     border-radius: 4px;
@@ -124,13 +118,22 @@ header {
 
 .card-header {
     font-weight: 800;
-    background-color: rgb(216, 215, 215);
+    ;
+    background-color: rgb(206, 206, 206);
     text-align: center;
 }
 
 .card {
-    background-color: rgb(206, 206, 206);
-    border: 1px inset rgb(163, 167, 221);
+    background-color: rgb(216, 215, 215);
+    border: 1px groove rgb(163, 167, 221);
+    border-radius: 0.3rem;
+}
+
+#div-see {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-left: 1.2rem;
+    width: 330px;
 }
 
 nav ul {
@@ -143,7 +146,7 @@ nav ul {
 nav li {
     /* border: 2px dotted orange; */
     margin-left: 0.5em;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 nav a {
@@ -210,8 +213,9 @@ maybe not so necessary
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 1rem 1.5rem;
-    width: 20rem;
-    border-radius: 0.5rem;
+    width: 11.5rem;
+    border-radius: 0.1rem;
+    border-style: groove;
 }
 
 .modal-edit-close-button {
@@ -225,14 +229,13 @@ maybe not so necessary
     letter-spacing: 0.01785714em;
     font-size: 1rem;
     font-weight: 500;
-    line-height: 1.25rem;
     height: 36px;
     padding: 8px 24px;
-    border-radius: 4px;
+    border-radius: 0.1rem;
     border-color: transparent !important;
     background-color: rgb(142, 166, 245);
     cursor: pointer;
-    margin-left: 0.5em;
+    margin-left: 0.25em;
 }
 
 .modal-edit-close-button:hover {
@@ -243,13 +246,16 @@ maybe not so necessary
 .open-modal-edit {
     opacity: 1;
     visibility: visible;
-    transform: scale(2.0);
+    transform: scale(1.36);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
 .modal-edit-inputs {
-    width: 100%;
-    height: 20%;
+    border-radius: 0.1rem;
+    width: 70%;
+    height: 30%;
+    margin-left: 0.25em;
+    font-size: 1rem;
 }
 
 #white {
@@ -292,9 +298,11 @@ maybe not so necessary
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 1rem 1.5rem;
-    width: 20rem;
-    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    width: 13rem;
+    border-radius: 0.1rem;
+    border-style: groove;
 }
 
 .modal-delete-close-button {
@@ -306,15 +314,16 @@ maybe not so necessary
     text-overflow: ellipsis;
     white-space: nowrap;
     letter-spacing: 0.01785714em;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     line-height: 1.25rem;
     height: 36px;
     padding: 8px 24px;
-    border-radius: 4px;
+    border-radius: 0.1rem;
     border-color: transparent !important;
     background-color: rgb(245, 152, 152);
     cursor: pointer;
+    margin-left: 0.25em;
 }
 
 .modal-delete-close-button:hover {
@@ -325,7 +334,7 @@ maybe not so necessary
 .open-modal-delete {
     opacity: 1;
     visibility: visible;
-    transform: scale(2.0);
+    transform: scale(0.95);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
@@ -368,7 +377,7 @@ maybe not so necessary
     /* vertical-align: middle;
     align-items: center; */
     border-top: 1px solid #dee2e6;
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 
 .table thead th {
@@ -715,16 +724,4 @@ maybe not so necessary
 
 .table-responsive>.table-bordered {
     border: 0;
-}
-
-@media (max-width: 450px) {
-    body {
-        font-size: 2rem;
-    }
-    nav li {
-        font-size: 6rem;
-    }
-    header {
-        padding: 1em
-    }
 }

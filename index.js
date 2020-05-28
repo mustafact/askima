@@ -834,7 +834,7 @@ class App {
         let htmlCardToDisplay =
             `
              
-    <div class="card" style="width: 30rem;">
+    <div class="card">
       <div class="card-header">
         ${brand.charAt(0).toUpperCase() + brand.slice(1)} 
       </div>
