@@ -145,7 +145,7 @@ header {
     font-size: 1.3rem;
     margin-top: 1.5rem;
     margin-left: 4rem;
-    width: 330px;
+    width: 400px;
 }
 
 nav ul {
@@ -748,7 +748,7 @@ nav a:focus {
     }
     .table th,
     .table td {
-        padding: 0.2rem;
+        padding: 0.32rem;
         font-size: 1rem;
     }
     nav li {
@@ -758,7 +758,7 @@ nav a:focus {
         font-size: 1rem;
         margin-top: 1.3rem;
         margin-left: 0.8rem;
-        width: 300px;
+        width: 286px;
     }
     header {
         height: 60px;
