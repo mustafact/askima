@@ -99,7 +99,7 @@ body {
     margin-bottom: 2px;
     margin-right: 2px;
     font-size: 1.4rem;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 #div-search-button {
@@ -727,7 +727,7 @@ nav a:focus {
     }
 } */
 
-@media (max-width: 380px) {
+@media (max-width: 440px) {
     #div-search {
         margin-bottom: 4rem;
         margin-top: 1rem;
@@ -744,6 +744,7 @@ nav a:focus {
         width: 6rem;
         height: 1.3rem;
         font-size: 1rem;
+        border-radius: 1px;
     }
     .table th,
     .table td {
@@ -756,11 +757,12 @@ nav a:focus {
     #div-see {
         font-size: 1rem;
         margin-top: 1.3rem;
-        margin-left: 1.1rem;
+        margin-left: 0.8rem;
         width: 300px;
     }
     header {
         height: 60px;
+        width: 100%;
     }
 }
 
