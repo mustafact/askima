@@ -53,17 +53,17 @@ body {
 #div-add-select-brand {
     margin-left: 50px;
     margin-top: 3rem;
-    width: 150px;
+    width: 170px;
     height: 40px;
     font-size: 1.25rem;
 }
 
 #div-add-date-input {
     margin-left: 50px;
-    width: 150px;
+    width: 170px;
     height: 40px;
     margin-bottom: 0;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 1rem;
 }
 
@@ -89,19 +89,20 @@ body {
 
 #div-search {
     margin-top: 2rem;
-    width: 100%;
+    width: 80%;
     height: 3rem;
-    margin-left: 50px;
+    margin-left: 40px;
     margin-bottom: 3rem;
+    font-size: 1rem;
 }
 
 .inputs-search {
-    width: 10rem;
-    height: 2rem;
+    width: 8rem;
+    height: 2.15rem;
     margin-bottom: 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     border: 2px solid rgb(120, 210, 120);
-    border-radius: 0.3rem;
+    border-radius: 4px;
     transition: border-color 2s ease-in-out, box-shadow 2s ease-in-out;
 }
 
@@ -109,8 +110,8 @@ body {
     width: 6rem;
     height: 2.5rem;
     margin-top: 0;
-    font-size: 1.5rem;
-    margin-left: 50px;
+    font-size: 1.2rem;
+    margin-left: 0px;
     border: 2px solid rgb(120, 210, 120);
     border-radius: 4px;
 }
@@ -164,7 +165,7 @@ nav ul {
 
 nav li {
     /* border: 2px dotted orange; */
-    margin-left: 0.5em;
+    margin-left: 0.8em;
     font-size: 3rem;
 }
 
