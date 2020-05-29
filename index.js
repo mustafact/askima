@@ -111,6 +111,8 @@ class App {
 
         this.$divSee = document.querySelector("#div-see");
 
+        this.$divSeeGlobal = document.querySelector("#div-see-global");
+
         // SEARCH PAGE
 
         this.$divSearch = document.querySelector("#div-search");
@@ -280,28 +282,39 @@ class App {
         this.$divAdd.classList.add("visible-to-user");
         this.$divSee.classList.remove("visible-to-user");
         this.$divSearch.classList.remove("visible-to-user");
+        this.$divSeeGlobal.classList.remove("visible-to-user");
         this.$divSearchTable.classList.add("invisible-to-user");
     }
 
 
     handleClickNavSee(e) {
         this.$divSee.classList.add("visible-to-user");
+        this.$divSeeGlobal.classList.add("visible-to-user");
+
         this.$divAdd.classList.remove("visible-to-user");
         this.$divSearch.classList.remove("visible-to-user");
         this.$divSearchTable.classList.add("invisible-to-user");
+
+
+
         this.makeBrandCardAfterCalculations();
 
     }
 
 
     handleClickNavSearch(e) {
-        this.$divSearch.classList.add("visible-to-user");
-        this.$divAdd.classList.remove("visible-to-user");
-        this.$divSee.classList.remove("visible-to-user");
-        this.$divSearchTable.classList.remove("invisible-to-user");
 
-        this.renderTableData();
-
+        if (this.allCars.length === 0) {
+            alert("no customers yet... please add some customers");
+            return;
+        } else if (this.allCars.length > 0) {
+            this.$divSearch.classList.add("visible-to-user");
+            this.$divAdd.classList.remove("visible-to-user");
+            this.$divSee.classList.remove("visible-to-user");
+            this.$divSeeGlobal.classList.remove("visible-to-user");
+            this.$divSearchTable.classList.remove("invisible-to-user");
+            this.renderTableData();
+        }
     }
 
 
@@ -358,10 +371,10 @@ class App {
             this.$modalEditDatePlaceholder.value);
 
         // instant placeholders in the memory for the current input data
-        let brand = this.$modalEditBrandPlaceholder.value
-        let name = this.$modalEditNamePlaceholder.value
-        let amount = this.$modalEditAmountPlaceholder.value
-        let date = this.$modalEditDatePlaceholder.value
+        let brand = this.$modalEditBrandPlaceholder.value;
+        let name = this.$modalEditNamePlaceholder.value;
+        let amount = this.$modalEditAmountPlaceholder.value;
+        let date = this.$modalEditDatePlaceholder.value;
 
         // see them
         console.log(brand, name, amount, date);
@@ -810,6 +823,44 @@ class App {
         //     return acc + Number(curr.amount)
         // }, 0)
 
+        let globalSales = array.reduce((acc, curr) => {
+            acc = acc + Number(curr.amount)
+            return acc
+        }, 0)
+
+        let globalNotPaid = array.filter(item => item.name.includes("%")).
+        reduce((acc, curr) => {
+            acc = acc + Number(curr.amount)
+            return acc
+        }, 0)
+
+
+        let globalNumberOfCustomers = array.length;
+
+        let globalNumberOfNotPaid = array.filter(item => item.name.includes("%")).length;
+
+        console.log(globalSales);
+
+        let htmlGlobalCardToDisplay =
+            `         
+        <div class="card">
+        <div class="card-header">
+            All Customers 
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Total Sales : ${globalSales}</li>
+            <li class="list-group-item">Total Customers : ${globalNumberOfCustomers}</li>
+            <li class="list-group-item">Total Amount Not Paid : ${globalNotPaid}</li>
+            <li class="list-group-item">Total Customers Not Paid : ${globalNumberOfNotPaid} </li>
+        </ul>
+        </div>
+        <br>
+        `
+
+        this.$divSeeGlobal.innerHTML = htmlGlobalCardToDisplay;
+
+
+
 
         let totalSales = array.filter(item => item.brand === brand).
         reduce((acc, curr) => {
@@ -829,7 +880,8 @@ class App {
 
         console.log(totalSales, howManyCustomersPaidOrNotPaidAltogether, totalNotPaid, howManyNotPaid, );
 
-        console.log(this.allCars.filter(item => item.brand === brand))
+
+
 
 
         let htmlCardToDisplay =

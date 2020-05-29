@@ -56,22 +56,23 @@ body {
     margin-left: 50px;
     margin-top: 3rem;
     width: 170px;
-    height: 40px;
+    height: 30px;
     font-size: 1.25rem;
 }
 
 #div-add-date-input {
     margin-left: 50px;
-    width: 170px;
-    height: 35px;
-    margin-bottom: 0;
+    width: 160px;
+    height: 27px;
+    margin-bottom: 1.2rem;
     font-size: 1.25rem;
     margin-bottom: 1rem;
 }
 
 #div-add-textarea-add-cars {
+    margin-top: 0.8rem;
     margin-left: 50px;
-    width: 230px;
+    width: 210px;
     margin-left: 50px;
     font-size: 1.5rem;
 }
@@ -146,6 +147,13 @@ header {
     width: 400px;
 }
 
+#div-see-global {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-left: 4rem;
+    width: 400px;
+}
+
 nav ul {
     /* border: 1px solid magenta; */
     list-style: none;
@@ -155,7 +163,7 @@ nav ul {
 
 nav li {
     /* border: 2px dotted orange; */
-    margin-left: 0.6em;
+    margin-left: 1em;
     font-size: 3rem;
 }
 
@@ -767,6 +775,12 @@ nav a:focus {
         font-size: 2.2rem;
     }
     #div-see {
+        font-size: 1rem;
+        margin-top: 1.3rem;
+        margin-left: 0.8rem;
+        width: 300px;
+    }
+    #div-see-global {
         font-size: 1rem;
         margin-top: 1.3rem;
         margin-left: 0.8rem;
