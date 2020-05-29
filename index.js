@@ -90,11 +90,11 @@ class App {
         // modal edit save button
         this.$modalEditSaveButton = document.querySelector('#modal-edit-save-button');
         // modal edit back button
-        this.$modalEditBackButton = document.querySelector("#modal-edit-back-button");
+        this.$modalEditCancelButton = document.querySelector("#modal-edit-cancel-button");
         // modal delete delete button
         this.$modalDeleteButton = document.querySelector("#modal-delete-button");
         // modal delete back button
-        this.$modalDeleteBackButton = document.querySelector("#modal-delete-back-button");
+        this.$modalDeleteCancelButton = document.querySelector("#modal-delete-cancel-button");
 
 
         // modal edit input placeholders
@@ -206,13 +206,13 @@ class App {
 
         // edit modal back button event OK
 
-        this.$modalEditBackButton.addEventListener("click", e => {
+        this.$modalEditCancelButton.addEventListener("click", e => {
             this.$modalEdit.classList.toggle("open-modal-edit");
         });
 
 
         // delete modal back button event OK
-        this.$modalDeleteBackButton.addEventListener("click", e => {
+        this.$modalDeleteCancelButton.addEventListener("click", e => {
             this.closeModalDelete(e);
             console.log(e.target);
         });

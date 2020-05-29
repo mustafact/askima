@@ -20,12 +20,13 @@ body {
     margin-top: 0;
     margin-left: 3px;
     font-size: 1.5rem;
-    border: 2px solid rgb(38, 50, 216);
+    background-color: rgb(138, 181, 255);
+    border: 2px solid rgb(36, 115, 235);
     border-radius: 4px;
 }
 
 #div-add-customer-button:hover {
-    background-color: rgb(38, 50, 216);
+    background-color: rgb(36, 115, 235);
     color: white;
     margin-left: 5px;
 }
@@ -36,12 +37,13 @@ body {
     margin-top: 0;
     margin-left: 3px;
     font-size: 1.5rem;
-    border: 2px solid rgb(38, 50, 216);
+    background-color: rgb(138, 181, 255);
+    border: 2px solid rgb(36, 115, 235);
     border-radius: 4px;
 }
 
 #div-clear-form-button:hover {
-    background-color: rgb(38, 50, 216);
+    background-color: rgb(36, 115, 235);
     color: white;
     margin-left: 5px;
 }
@@ -94,25 +96,25 @@ body {
 .inputs-search {
     width: 9rem;
     height: 2.25rem;
-    margin-bottom: 0;
+    margin-bottom: 2px;
+    margin-right: 2px;
     font-size: 1.4rem;
-    border: 2px solid rgb(120, 210, 120);
     border-radius: 4px;
-    transition: border-color 2s ease-in-out, box-shadow 2s ease-in-out;
 }
 
 #div-search-button {
     width: 6rem;
-    height: 2.5rem;
+    height: 2.35rem;
     margin-top: 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-left: 0px;
-    border: 2px solid rgb(120, 210, 120);
     border-radius: 4px;
+    background-color: rgb(138, 181, 255);
+    border: 2px solid rgb(36, 115, 235);
 }
 
 #div-search-button:hover {
-    background-color: rgb(120, 210, 120);
+    background-color: rgb(36, 115, 235);
     color: white;
 }
 
@@ -123,6 +125,7 @@ body {
 header {
     background: #adb5bd;
     padding: 0.5em 0;
+    height: 73px;
 }
 
 .card-header {
@@ -141,7 +144,7 @@ header {
 #div-see {
     font-size: 1.3rem;
     margin-top: 1.5rem;
-    margin-left: 1.2rem;
+    margin-left: 4rem;
     width: 330px;
 }
 
@@ -194,7 +197,7 @@ nav a:focus {
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 1rem 1.5rem;
-    width: 11.5rem;
+    width: 13rem;
     border-radius: 0.1rem;
     border-style: groove;
 }
@@ -281,9 +284,14 @@ nav a:focus {
     background-color: white;
     padding: 0.75rem 1.5rem;
     font-size: 1.2rem;
-    width: 13rem;
+    width: 15rem;
     border-radius: 0.1rem;
     border-style: groove;
+}
+
+#modal-delete-cancel-button,
+#modal-edit-cancel-button {
+    background-color: rgba(170, 168, 168, 0.5);
 }
 
 .modal-delete-close-button {
@@ -707,13 +715,81 @@ nav a:focus {
     border: 0;
 }
 
-@media (max-width: 370px) {
-    #div-search {
-        margin-bottom: 7rem;
-    }
-    .table th,
+
+/* @media (max-width: 500px) {
+    /* #div-search {
+        margin-bottom: 5rem;
+    } 
+     .table th,
     .table td {
         padding: 0.5rem;
         font-size: 1rem;
     }
+} */
+
+@media (max-width: 380px) {
+    #div-search {
+        margin-bottom: 4rem;
+        margin-top: 1rem;
+        font-size: 1rem;
+        height: 2rem;
+    }
+    #div-search-button {
+        font-size: 1rem;
+        width: 4.8rem;
+        height: 1.8rem;
+        margin-left: 1.2rem;
+    }
+    .inputs-search {
+        width: 6rem;
+        height: 1.3rem;
+        font-size: 1rem;
+    }
+    .table th,
+    .table td {
+        padding: 0.2rem;
+        font-size: 1rem;
+    }
+    nav li {
+        font-size: 2.2rem;
+    }
+    #div-see {
+        font-size: 1rem;
+        margin-top: 1.3rem;
+        margin-left: 1.1rem;
+        width: 300px;
+    }
+    header {
+        height: 60px;
+    }
 }
+
+
+/* #div-search {
+    margin-top: 2rem;
+    width: 80%;
+    height: 3rem;
+    margin-left: 40px;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+.inputs-search {
+    width: 9rem;
+    height: 2.25rem;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    border: 2px solid rgb(120, 210, 120);
+    border-radius: 4px;
+    transition: border-color 2s ease-in-out, box-shadow 2s ease-in-out;
+}
+
+#div-search-button {
+    width: 6rem;
+    height: 2.5rem;
+    margin-top: 0;
+    font-size: 1.2rem;
+    margin-left: 0px;
+    border: 2px solid rgb(120, 210, 120);
+    border-radius: 4px;
+} */
