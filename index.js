@@ -498,6 +498,7 @@ class App {
 
 
         let dateInput = this.$divAddDateInput.value;
+        console.log(dateInput)
 
         let lastTwoDigitsOfCurrentYear = new Date().getFullYear().toString().slice(-2);
 
@@ -533,30 +534,8 @@ class App {
             carsInput !== "") {
 
             this.isFormValid = true;
+            console.log(this.isFormValid);
 
-            let splitDataByLine = carsInput.split("\n");
-            console.log(splitDataByLine);
-            let splitDataByTab = splitDataByLine.map(item => item.split("\t"));
-
-            console.log(splitDataByTab);
-
-            splitDataByTab.map(item => {
-
-                let obj = {
-                    brand: this.selectedBrand.toLowerCase(),
-                    name: item[0].toLowerCase(),
-                    amount: item[1].toLowerCase(),
-                    date: this.transformedDateInput,
-                    id: this.allCars.length > 0 ? this.allCars[this.allCars.length - 1].id + 1 : 1
-                };
-
-                this.allCars = [...this.allCars, obj];
-
-                this.saveData();
-
-                console.log(this.allCars);
-
-            });
 
         } else {
             this.isFormValid = false;
@@ -565,31 +544,49 @@ class App {
         }
 
 
-        console.log(this.isFormValid);
+        console.log(this.isFormValid && this.isDateValid);
 
         // only if both are true then make the array of objects
         // otherwise alert the user
 
         if (this.isDateValid && this.isFormValid) {
 
-            let answer = confirm("add these customers?")
+            let answer = confirm("add these customers?");
 
             if (answer === true) {
 
                 console.log("true");
 
                 console.log(this.$divAddSelectBrand.value);
-                // this.transformDateEntered(); // ok
-
-                // this.transformDataEnteredIntoTextareaIntoArrayOfObjects();
 
 
-                // this.saveData();
+                let splitDataByLine = carsInput.split("\n");
+                console.log(splitDataByLine);
+                let splitDataByTab = splitDataByLine.map(item => item.split("\t"));
+
+                console.log(splitDataByTab);
+
+                splitDataByTab.map(item => {
+
+                    let obj = {
+                        brand: this.selectedBrand.toLowerCase(),
+                        name: item[0].toLowerCase(),
+                        amount: item[1].toLowerCase(),
+                        date: this.transformedDateInput,
+                        id: this.allCars.length > 0 ? this.allCars[this.allCars.length - 1].id + 1 : 1
+                    };
+
+                    this.allCars = [...this.allCars, obj];
+
+                    this.saveData();
+
+                    console.log(this.allCars);
+
+                });
 
             } else {
                 return;
             }
-
 
         } else {
             console.log("INCOMPLETE DATA!!!");
