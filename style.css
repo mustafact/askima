@@ -18,7 +18,7 @@ body {
     width: 7rem;
     height: 3rem;
     margin-top: 0;
-    margin-left: 140px;
+    margin-left: 3px;
     font-size: 1.5rem;
     border: 2px solid rgb(38, 50, 216);
     border-radius: 4px;
@@ -27,21 +27,40 @@ body {
 #div-add-customer-button:hover {
     background-color: rgb(38, 50, 216);
     color: white;
-    margin-left: 140px;
+    margin-left: 5px;
+}
+
+#div-clear-form-button {
+    width: 7rem;
+    height: 3rem;
+    margin-top: 0;
+    margin-left: 3px;
+    font-size: 1.5rem;
+    border: 2px solid rgb(38, 50, 216);
+    border-radius: 4px;
+}
+
+#div-clear-form-button:hover {
+    background-color: rgb(38, 50, 216);
+    color: white;
+    margin-left: 5px;
+}
+
+#div-form-buttons {
+    margin-left: 47px;
 }
 
 #div-add-select-brand {
     margin-left: 50px;
     margin-top: 3rem;
-    margin-bottom: 1rem;
-    width: 200px;
+    width: 150px;
     height: 40px;
     font-size: 1.25rem;
 }
 
 #div-add-date-input {
     margin-left: 50px;
-    width: 200px;
+    width: 150px;
     height: 40px;
     margin-bottom: 0;
     font-size: 1.5rem;
@@ -50,7 +69,7 @@ body {
 
 #div-add-textarea-add-cars {
     margin-left: 50px;
-    width: 200px;
+    width: 230px;
     margin-left: 50px;
     font-size: 1.5rem;
 }
@@ -159,7 +178,7 @@ nav a {
 nav a:hover,
 nav a:focus {
     color: rgb(35, 32, 203);
-    font-weight: 500;
+    font-weight: 550;
     border-bottom: rgb(38, 50, 216);
 }
 

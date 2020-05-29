@@ -63,6 +63,7 @@ class App {
         this.$divAddDateInput = document.querySelector("#div-add-date-input");
         this.$divAddTextareaAddCars = document.querySelector("#div-add-textarea-add-cars");
         this.$divAddCustomerButton = document.querySelector("#div-add-customer-button");
+        this.$divClearFormButton = document.querySelector("#div-clear-form-button");
 
 
 
@@ -170,9 +171,13 @@ class App {
 
             // change the stae according to this
 
-
             this.validateAndCreate();
 
+        });
+
+
+        this.$divClearFormButton.addEventListener("click", (e) => {
+            this.clearAddCustomersForm();
         });
 
 
@@ -254,16 +259,16 @@ class App {
 
 
 
+    }
 
 
 
 
+    clearAddCustomersForm() {
 
-
-
-
-
-
+        this.$divAddSelectBrand.value = "Select Brand";
+        this.$divAddDateInput.value = "";
+        this.$divAddTextareaAddCars.value = "";
 
     }
 
@@ -296,7 +301,6 @@ class App {
         this.$divSearchTable.classList.remove("invisible-to-user");
 
         this.renderTableData();
-
 
     }
 
